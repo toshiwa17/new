@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception';
+require 'PHPMailer/src/PHPMailer';
+require 'PHPMailer/src/SMTP';
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -39,7 +39,7 @@ if(isset($_POST['send'])) {
         ?>
         <script>
             alert("Your Message has been sent.");
-            window.location.href = "contact.html";
+            window.location.href = "contact";
         </script>
         <?php
     } catch (Exception $e) {

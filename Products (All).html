@@ -20,6 +20,28 @@
     <title>
         MCR Agriventure
     </title>
+    <script>
+        function searchProducts() {
+            var input, filter, sections, products, i, j, h3, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            sections = document.getElementsByClassName('products-col');
+
+            for (i = 0; i < sections.length; i++) {
+                products = sections[i].getElementsByClassName('desc');
+                for (j = 0; j < products.length; j++) {
+                    h3 = products[j].getElementsByTagName('h3')[0];
+                    txtValue = h3.textContent || h3.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        sections[i].style.display = "";
+                        break;
+                    } else {
+                        sections[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -87,15 +109,15 @@
         </ul>
     </div>
 
-
-
     <div class="products">
+        <input type="text" id="searchInput" class="form-control" onkeyup="searchProducts()"
+            placeholder="Search products...">
         <section class="seeds" id="seeds">
-            <h1>SEEDS</h1>
+            <h2>SEEDS</h2>
             <div class="row1">
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Seeds/Banate%20King.png">
+                        <img src="Products/Seeds/Banate%20King.png" alt="Banate King">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
@@ -103,13 +125,12 @@
                     </div>
                     <div class="desc">
                         <h3>Talong/Eggplant</h3>
-                    <p>Banate King F1</p>
-
+                        <p>Banate King F1</p>
                     </div>
                 </div>
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Seeds/Bongga.png">
+                        <img src="Products/Seeds/Bongga.png" alt="Bongga">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
@@ -117,16 +138,14 @@
                     </div>
                     <div class="desc">
                         <h3>Sitaw/String Beans</h3>
-                        <p>Bongga</p>  
+                        <p>Bongga</p>
                     </div>
                 </div>
-
             </div>
-
             <div class="row1">
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Seeds/Django%20Dos%20F1.png">
+                        <img src="Products/Seeds/Django%20Dos%20F1.png" alt="Django Dos F1">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
@@ -139,7 +158,7 @@
                 </div>
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Seeds/Dulce%20F1.png">
+                        <img src="Products/Seeds/Dulce%20F1.png" alt="Dulce F1">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
@@ -151,11 +170,10 @@
                     </div>
                 </div>
             </div>
-
             <div class="row1">
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Seeds/Fortuner%20F1.png">
+                        <img src="Products/Seeds/Fortuner%20F1.png" alt="Fortuner F1">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
@@ -163,14 +181,12 @@
                     </div>
                     <div class="desc">
                         <h3>Talong/Eggplant</h3>
-                      <p>Fortuner F1</p>
-                        
-                     
+                        <p>Fortuner F1</p>
                     </div>
                 </div>
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Seeds/Mayumi%20F1.png">
+                        <img src="Products/Seeds/Mayumi%20F1.png" alt="Mayumi F1">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
@@ -179,18 +195,17 @@
                     <div class="desc">
                         <h3>Upo/Battle Gourd</h3>
                         <p>Mayumi F1</p>
-
                     </div>
                 </div>
-
             </div>
         </section>
+
         <section class="garden" id="garden">
-            <h1>GARDEN EQUIPMENTS</h1>
+            <h2>GARDEN EQUIPMENTS</h2>
             <div class="row1">
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Garden/Osmocote%20250grams.png">
+                        <img src="Products/Garden/Osmocote%20250grams.png" alt="Osmocote 250g">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
@@ -198,13 +213,11 @@
                     </div>
                     <div class="desc">
                         <h3>Osmocote 250g</h3>
-                        
-
                     </div>
                 </div>
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Garden/Osmocote%201kg.png">
+                        <img src="Products/Garden/Osmocote%201kg.png" alt="Osmocote 1kg">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
@@ -212,16 +225,13 @@
                     </div>
                     <div class="desc">
                         <h3>Osmocote 1kg</h3>
-                        
                     </div>
                 </div>
-
             </div>
-
             <div class="row1">
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Garden/Osmocote%20kg.png">
+                        <img src="Products/Garden/Osmocote%20kg.png" alt="Osmocote 3.6kg">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
@@ -229,18 +239,17 @@
                     </div>
                     <div class="desc">
                         <h3>Osmocote 3.6kg</h3>
-                        
                     </div>
                 </div>
-
             </div>
         </section>
+
         <section class="pets" id="pets">
-            <h1>PET SUPPLIES</h1>
+            <h2>PET SUPPLIES</h2>
             <div class="row1">
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Pets/Super%20Nova%20Fish%20Food%2020g.png">
+                        <img src="Products/Pets/Super%20Nova%20Fish%20Food%2020g.png" alt="Super Nova Fish Food 20g">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
@@ -248,13 +257,11 @@
                     </div>
                     <div class="desc">
                         <h3>Super Nova Fish Food 20g</h3>
-                       
-
                     </div>
                 </div>
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Pets/Super%20Nova%20Fish%20Food%20100g.png">
+                        <img src="Products/Pets/Super%20Nova%20Fish%20Food%20100g.png" alt="Super Nova Fish Food 100g">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
@@ -262,16 +269,13 @@
                     </div>
                     <div class="desc">
                         <h3>Super Nova Fish Food 100g</h3>
-                        
                     </div>
                 </div>
-
             </div>
-
             <div class="row1">
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Pets/Super%20Nova%20Fish%20Food%20200g.png">
+                        <img src="Products/Pets/Super%20Nova%20Fish%20Food%20200g.png" alt="Super Nova Fish Food 200g">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
@@ -279,60 +283,65 @@
                     </div>
                     <div class="desc">
                         <h3>Super Nova Fish Food 200g</h3>
-                      
                     </div>
                 </div>
+            </div>
         </section>
+
         <section class="veterinary" id="veterinary">
-            <h1>Veterinary</h1>
+            <h2>VETERINARY</h2>
             <div class="row1">
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Pets/Super%20Nova%20Fish%20Food%20200g.png">
+                        <img src="Products/Veterinary/Product1.png" alt="Product 1">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
                         </div>
                     </div>
                     <div class="desc">
-                        <h3>Super Nova Fish Food 200g</h3>
-                       
+                        <h3>Product 1</h3>
                     </div>
                 </div>
-
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Pets/Super%20Nova%20Fish%20Food%20100g.png">
+                        <img src="Products/Veterinary/Product2.png" alt="Product 2">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
                         </div>
                     </div>
                     <div class="desc">
-                        <h3>Super Nova Fish Food 100g</h3>
-                        
+                        <h3>Product 2</h3>
                     </div>
                 </div>
             </div>
             <div class="row1">
                 <div class="products-col">
                     <div class="image">
-                        <img src="Products/Pets/Super%20Nova%20Fish%20Food%20200g.png">
+                        <img src="Products/Veterinary/Product3.png" alt="Product 3">
                         <div class="check-out">
                             <button>Lazada</button>
                             <button>Shopee</button>
                         </div>
                     </div>
                     <div class="desc">
-                        <h3>Super Nova Fish Food 200g</h3>
-                     
+                        <h3>Product 3</h3>
                     </div>
                 </div>
-
-
-
-
-
+                <div class="products-col">
+                    <div class="image">
+                        <img src="Products/Veterinary/Product4.png" alt="Product 4">
+                        <div class="check-out">
+                            <button>Lazada</button>
+                            <button>Shopee</button>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <h3>Product 4</h3>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <!--Call to Action-->
