@@ -216,7 +216,7 @@ nav .fa {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('Picture/Banner.jpg');
+    /* background-image: url('Picture/Banner.jpg'); */
     height: 70%;
     background-position: center;
     background-repeat: no-repeat;
